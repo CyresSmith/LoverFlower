@@ -1,10 +1,10 @@
 :root {
-  font-family: Fira Sans, sans-serif;
+  font-family: Oswald, sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 14px;
 
-  color: #173d33;
-  background-color: #f3f5fa;
+  color: #fff;
+  background-color: #040a0a;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -20,9 +20,6 @@
 
 body {
   margin: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  transition: background-color 200ms;
 }
 
 h1,

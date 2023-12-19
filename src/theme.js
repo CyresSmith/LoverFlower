@@ -1,35 +1,40 @@
 const theme = {
   colors: {
     white: '#fff',
-    black: '#000000',
-    text: '#173D33',
-    background: '#F3F5FA',
-    accent: {
-      regular: '#97D28B',
-      dark: '#173D33',
-      light: '#DCEFD8',
-    },
-    primary: {
-      regular: '#BDBDBD',
-      light: '#EAEDF1',
-      dark: '#292D32',
-    },
-    danger: '#D28B8B',
+    black: '#000',
+    text: '#fff',
+    background: '#040A0A',
+    primary: '#43FFD2',
+    secondary: '#D978AC',
+    hover: '#7D2253',
   },
 
   fonts: {
-    body: 'Fira Sans, sans-serif',
-    heading: 'Oswald, sans-serif',
+    body: 'Oswald, sans-serif',
+    heading: 'Cormorant, serif',
   },
 
   fontSizes: {
-    xs: '12px',
-    s: '16px',
-    m: '24px',
-    l: '32px',
-    xl: '48px',
-    xxl: '64px',
-    max: '164px',
+    xs: '10px',
+    s: '12px',
+    m: '14px',
+    l: '16px',
+    xl: '18px',
+    xxl: '20px',
+
+    heading: {
+      desktop: {
+        s: '40px',
+        m: '60px',
+        l: '100px',
+        xl: '200px',
+      },
+      mobile: {
+        s: '20px',
+        m: '40px',
+        l: '50px',
+      },
+    },
   },
 
   fontWeights: {
@@ -39,9 +44,7 @@ const theme = {
   },
 
   lineHeights: {
-    s: 1.12,
-    m: 1.25,
-    l: 1.5,
+    m: 1.3,
   },
 
   mediaBreakpoints: {
