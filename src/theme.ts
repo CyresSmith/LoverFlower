@@ -5,8 +5,9 @@ const theme = {
     text: '#fff',
     background: '#040A0A',
     primary: '#43FFD2',
-    secondary: '#D978AC',
-    hover: '#7D2253',
+    secondary: '#7D2253',
+    accent: '#D978AC',
+    danger: '#FF3A44',
   },
 
   fonts: {
@@ -49,14 +50,14 @@ const theme = {
 
   mediaBreakpoints: {
     mobile: {
-      media: 'screen and (360px <= width <= 767px)',
-      width: '360px',
+      media: 'screen and (320px <= width <= 767px)',
+      width: '320px',
     },
     tablet: {
-      media: 'screen and (768px <= width <= 1279px)',
+      media: 'screen and (768px <= width <= 1149px)',
       width: '768px',
     },
-    desktop: { media: 'screen and (1280px <= width)', width: '1280px' },
+    desktop: { media: 'screen and (1150px <= width)', width: '1150px' },
   },
 
   borders: {
@@ -75,6 +76,6 @@ const theme = {
 export default theme;
 
 document.body.style.fontFamily = theme.fonts.body;
-document.body.style.fontSize = theme.fontSizes.s;
+document.body.style.fontSize = theme.fontSizes.m;
 document.body.style.color = theme.colors.text;
 document.body.style.backgroundColor = theme.colors.background;

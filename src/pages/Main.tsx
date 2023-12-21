@@ -1,7 +1,13 @@
+import Hero from 'components/Main/Hero';
+
 type Props = {};
 
 const Main = (props: Props) => {
-  return <div>Main</div>;
+  return (
+    <>
+      <Hero />
+    </>
+  );
 };
 
 export default Main;
