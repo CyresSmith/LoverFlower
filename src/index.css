@@ -51,14 +51,14 @@ a {
   text-decoration: none;
   color: inherit;
 }
-/* 
+
 ::-webkit-scrollbar {
   width: 10px;
   height: 10px;
 }
 ::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  background-color: #97d28b;
+  background-color: #43ffd2;
 }
 
 ::-webkit-scrollbar-track {
@@ -66,5 +66,5 @@ a {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #86bb7c;
-} */
+  background: #000;
+}

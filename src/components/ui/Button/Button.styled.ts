@@ -8,7 +8,7 @@ interface variant {
 
 export const StyledButton = styled.button<variant>`
   height: 50px;
-  width: ${p => (p.variant === 'primary' ? '220px' : '255px')};
+  min-width: 220px;
   padding: 16px;
   color: ${p =>
     p.variant === 'primary' ? theme.colors.background : theme.colors.white};
@@ -45,8 +45,9 @@ export const StyledButton = styled.button<variant>`
 
   :disabled {
     color: #555;
-    background-color: ${theme.colors.background};
+    background-color: transparent;
     border: 1px solid #555;
+    cursor: default;
 
     > svg {
       fill: #555;

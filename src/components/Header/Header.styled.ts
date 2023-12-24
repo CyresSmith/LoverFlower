@@ -14,7 +14,8 @@ export const HeaderBox = styled.header<IScrollValue>`
   height: 80px;
   z-index: 6;
   background-color: ${p =>
-    p.scrollValue > 80 ? theme.colors.background : 'transparent'};
+    p.scrollValue > 80 ? 'rgba(0, 0,0, 0.8)' : 'transparent'};
+  backdrop-filter: ${p => (p.scrollValue > 80 ? 'blur(10px)' : 'none')};
   transition: ${theme.transition.primary};
 `;
 

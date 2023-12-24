@@ -3,11 +3,12 @@ const theme = {
     white: '#fff',
     black: '#000',
     text: '#fff',
-    background: '#040A0A',
+    background: '#000',
     primary: '#43FFD2',
     secondary: '#7D2253',
     accent: '#D978AC',
     danger: '#FF3A44',
+    success: '#31985A',
   },
 
   fonts: {

@@ -1,18 +1,19 @@
 import Footer from 'components/Footer';
 import Header from 'components/Header';
 import { Outlet } from 'react-router-dom';
+import LayoutBox from './LayoutBox';
 
-type Props = {};
-
-const Layout = (props: Props) => {
+const Layout = () => {
   return (
-    <>
+    <LayoutBox>
       <Header />
+
       <main>
         <Outlet />
       </main>
+
       <Footer />
-    </>
+    </LayoutBox>
   );
 };
 

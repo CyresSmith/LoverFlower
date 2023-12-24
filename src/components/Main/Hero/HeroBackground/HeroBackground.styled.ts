@@ -29,7 +29,7 @@ export const HeroBackgroundImgBox = styled.div`
 
 export const HeroImgBox = styled.div`
   position: absolute;
-  top: 0;
+  top: 132px;
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
@@ -94,14 +94,4 @@ export const Ellipse2 = styled.div`
   position: absolute;
   top: 236px;
   right: 15px;
-`;
-
-export const Bottom = styled.div`
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  height: 406px;
-  background: linear-gradient(180deg, rgba(4, 10, 10, 0) 0%, #040a0a 100%);
 `;
