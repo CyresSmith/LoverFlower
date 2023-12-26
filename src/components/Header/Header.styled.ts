@@ -1,10 +1,7 @@
 import styled from '@emotion/styled';
+import { IScrollValue } from 'components/Shared/types';
 import { NavLink } from 'react-router-dom';
 import theme from 'theme';
-
-interface IScrollValue {
-  scrollValue: number;
-}
 
 export const HeaderBox = styled.header<IScrollValue>`
   position: fixed;

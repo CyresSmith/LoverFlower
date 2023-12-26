@@ -26,9 +26,12 @@ const navLinks: INavLink[] = [
   { title: 'FAQ', to: 'faq' },
 ];
 
-const Header = () => {
+interface Props {
+  scroll: number;
+}
+
+const Header = ({ scroll }: Props) => {
   const [searchValue, setSearchValue] = useState('');
-  const [scroll, setScroll] = useState(0);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isSearchFocused, setIsSearchFocused] = useState(false);
 
@@ -56,19 +59,6 @@ const Header = () => {
     if (isSearchFocused) return;
     setIsSearchOpen(prev => !prev);
   };
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const position = window.scrollY;
-      setScroll(position);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
 
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {

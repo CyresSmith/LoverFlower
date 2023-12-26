@@ -26,3 +26,7 @@ export interface ISocialLink {
   Icon: ElementType<SVGProps<SVGElement>>;
   link: string;
 }
+
+export interface IScrollValue {
+  scrollValue: number;
+}
