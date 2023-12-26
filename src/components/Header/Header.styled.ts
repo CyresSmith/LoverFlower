@@ -14,9 +14,10 @@ export const HeaderBox = styled.header<IScrollValue>`
   height: 80px;
   z-index: 6;
   background-color: ${p =>
-    p.scrollValue > 80 ? 'rgba(0, 0,0, 0.8)' : 'transparent'};
+    p.scrollValue > 20 ? 'rgba(0, 0,0, 0.8)' : 'transparent'};
   backdrop-filter: ${p => (p.scrollValue > 80 ? 'blur(10px)' : 'none')};
   transition: ${theme.transition.primary};
+  overflow: hidden;
 `;
 
 export const Box = styled.div`
@@ -57,10 +58,25 @@ export const PhoneLink = styled.a`
   display: flex;
   align-items: center;
   gap: 10px;
+  transition: ${theme.transition.primary};
+
+  :hover {
+    > span {
+      color: ${theme.colors.white};
+    }
+  }
+
+  > span {
+    transition: ${theme.transition.primary};
+  }
 
   > svg {
     width: 18px;
     height: 18px;
     fill: inherit;
   }
+`;
+
+export const CartButtonBox = styled.div`
+  transition: ${theme.transition.primary};
 `;

@@ -19,7 +19,7 @@ export const ContactsList = styled.ul`
   flex-direction: column;
   text-align: right;
   gap: 26px;
-  margin-top: calc((80px - 17px) / 2);
+  margin-top: calc((150px - 17px) / 2);
 `;
 
 export const ContactItem = styled.li`
@@ -36,7 +36,6 @@ export const ContactItem = styled.li`
 
 export const ItemLink = styled.a`
   cursor: pointer;
-  z-index: 6;
   color: ${theme.colors.primary};
   transition: ${theme.transition.primary};
 

@@ -1,7 +1,16 @@
 import Logo from 'assets/svg/LF_logo.svg?react';
+import PhoneIcon from 'assets/svg/mdi-light_phone.svg?react';
+import CartButton from 'components/Shared/CartButton';
 import { Container } from 'components/Shared/Shared.styled';
 import { ChangeEvent, FormEvent, useEffect, useRef, useState } from 'react';
-import { Box, HeaderBox, Link, NavigationList } from './Header.styled';
+import {
+  Box,
+  CartButtonBox,
+  HeaderBox,
+  Link,
+  NavigationList,
+  PhoneLink,
+} from './Header.styled';
 import Search from './Search';
 
 interface INavLink {
@@ -106,13 +115,16 @@ const Header = () => {
             onSubmit={handleSearchSubmit}
           />
 
-          {/* {!isSearchOpen && (
+          {!isSearchOpen && (
             <PhoneLink href="tel:+375291136969">
-              <Phone />
+              <PhoneIcon />
+
               <span> +380 (98) 555-69-69</span>
             </PhoneLink>
           )}
-          <CartButton onClick={handleCartBtnClick} cartItemsCount={5} /> */}
+          <CartButtonBox>
+            <CartButton onClick={handleCartBtnClick} cartItemsCount={5} />
+          </CartButtonBox>
         </Box>
       </Container>
     </HeaderBox>
