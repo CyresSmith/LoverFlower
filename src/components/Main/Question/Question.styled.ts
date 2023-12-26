@@ -14,7 +14,7 @@ export const QuestionSectionBox = styled.div`
   top: 0;
   left: 0;
   width: 100%;
-  height: 666px;
+  height: 750px;
 
   > svg {
     position: absolute;

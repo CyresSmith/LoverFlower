@@ -8,7 +8,7 @@ interface ButtonProps {
   loading?: boolean;
   disabled?: boolean;
   variant?: 'primary' | 'secondary';
-  type: 'button' | 'submit';
+  type?: 'button' | 'submit';
   children: string;
   onClick?: (e: SyntheticEvent) => void;
 }

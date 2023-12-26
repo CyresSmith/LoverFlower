@@ -37,20 +37,6 @@ export const TitleBox = styled.div`
   justify-content: space-between;
 `;
 
-export interface IImageBox {
-  width: number;
-  height: number;
-  imgSrc: string;
-}
-
-export const ImageBox = styled.div<IImageBox>`
-  width: ${({ width }) => `${width}px`};
-  height: ${({ height }) => `${height}px`};
-  border-radius: 20px;
-  background: ${({ imgSrc }) => `url(${imgSrc})`};
-  background-size: cover;
-`;
-
 export const TitleSpan = styled.span`
   position: relative;
   top: -20px;

@@ -5,15 +5,15 @@ import LayoutBox from './LayoutBox';
 
 const Layout = () => {
   return (
-    <LayoutBox>
+    <>
       <Header />
-
-      <main>
-        <Outlet />
-      </main>
-
+      <LayoutBox>
+        <main>
+          <Outlet />
+        </main>
+      </LayoutBox>
       <Footer />
-    </LayoutBox>
+    </>
   );
 };
 

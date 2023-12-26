@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 import { Link } from 'react-router-dom';
 import theme from 'theme';
+import { IImageBox } from './types';
 
 export const Section = styled.section`
   padding: 100px 0;
@@ -55,6 +56,14 @@ export const StyledLink = styled(Link)`
   :hover {
     color: ${theme.colors.white};
   }
+`;
+
+export const ImageBox = styled.div<IImageBox>`
+  width: ${({ width }) => `${width}px`};
+  height: ${({ height }) => `${height}px`};
+  border-radius: 20px;
+  background: ${({ imgSrc }) => `url(${imgSrc})`};
+  background-size: cover;
 `;
 
 // export const Backdrop = styled.div`

@@ -103,6 +103,45 @@ export const Ellipse7 = styled.div`
   transform: rotate(25.828deg) translateX(580px);
 `;
 
+export const Ellipse8 = styled.div`
+  width: 99.587px;
+  height: 211.054px;
+  background: ${theme.colors.primary};
+  filter: blur(125px);
+
+  position: absolute;
+  top: 6620px;
+  left: 50%;
+  transform: rotate(21.097deg) translateX(-780px);
+`;
+
+export const Ellipse9 = styled.div`
+  width: 879.44px;
+  height: 211.054px;
+  border-radius: 879.44px;
+  background: ${theme.colors.primary};
+  filter: blur(125px);
+
+  position: absolute;
+  top: 6530px;
+  left: 50%;
+  transform: rotate(21.097deg) translateX(-80px);
+`;
+
+export const Ellipse10 = styled.div`
+  width: 354.93px;
+  height: 364.216px;
+  border-radius: 879.44px;
+  background: ${theme.colors.accent};
+  filter: blur(125px);
+  opacity: 0.6;
+
+  position: absolute;
+  top: 5900px;
+  left: 50%;
+  transform: rotate(32.828deg) translateX(550px);
+`;
+
 export const BackgroundText = styled.span<IPosition>`
   position: absolute;
   ${({ sideX, sizeX }) => {

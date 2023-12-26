@@ -7,12 +7,15 @@ import {
   Bottom,
   Box,
   Ellipse1,
+  Ellipse10,
   Ellipse2,
   Ellipse3,
   Ellipse4,
   Ellipse5,
   Ellipse6,
   Ellipse7,
+  Ellipse8,
+  Ellipse9,
 } from './LayoutBox.styled';
 
 import Lover_flower from 'assets/svg/lover_flower.svg?react';
@@ -47,8 +50,17 @@ const BackgroundTextArr: IAbsoluteText[] = [
   },
 ];
 
+const Instagram: IAbsoluteText = {
+  position: {
+    sideX: 'top',
+    sizeX: 6080,
+    sideY: 'left',
+    sizeY: 220,
+  },
+  text: 'Instagram',
+};
 type Props = {
-  children: ReactElement[];
+  children: ReactElement;
 };
 
 const LayoutBox = ({ children }: Props) => {
@@ -72,6 +84,12 @@ const LayoutBox = ({ children }: Props) => {
       <Lover_flower
         style={{ position: 'absolute', top: '4120px', right: '500px' }}
       />
+
+      <BackgroundText {...Instagram.position}>{Instagram.text}</BackgroundText>
+      <Ellipse8 />
+      <Ellipse9 />
+      <Ellipse10 />
+
       {children}
     </Box>
   );

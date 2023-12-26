@@ -1,13 +1,12 @@
 import {
   Container,
+  ImageBox,
   Section,
   SectionTitle,
 } from 'components/Shared/Shared.styled';
 
 import {
   BottomBox,
-  IImageBox,
-  ImageBox,
   LeftSide,
   List,
   ListItem,
@@ -21,6 +20,7 @@ import image1 from 'assets/img/36.jpg';
 import image4 from 'assets/img/37.jpg';
 import image3 from 'assets/img/38.jpg';
 import Arrow from 'assets/svg/Arrow8.svg?react';
+import { IImageBox } from 'components/Shared/types';
 import Button from 'components/ui/Button';
 
 interface IListItem {

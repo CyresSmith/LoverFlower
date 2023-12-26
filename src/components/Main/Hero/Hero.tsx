@@ -5,8 +5,8 @@ import Watsapp from 'assets/svg/watsapp.svg?react';
 
 import CartButton from 'components/Shared/CartButton';
 import { Container } from 'components/Shared/Shared.styled';
+import { ISocialLink } from 'components/Shared/types';
 import Button from 'components/ui/Button';
-import { ElementType, SVGProps } from 'react';
 import {
   CallButton,
   ContactItem,
@@ -22,7 +22,7 @@ import {
 } from './Hero.styled';
 import HeroBackground from './HeroBackground';
 
-interface ILink {
+export interface ILink {
   link: string;
   title?: string;
   text?: string | string[];
@@ -40,11 +40,6 @@ const ContactsLinks: ILink[] = [
     text: ['10:00 до 21:00', 'без выходных'],
   },
 ];
-
-interface ISocialLink {
-  Icon: ElementType<SVGProps<SVGElement>>;
-  link: string;
-}
 
 const SocialLinks: ISocialLink[] = [
   { Icon: Instagram, link: 'https://www.instagram.com/' },
@@ -86,7 +81,11 @@ const Hero = () => {
           <SocialLinksList>
             {SocialLinks.map(({ link, Icon }) => (
               <li key={link}>
-                <a href={link}>
+                <a
+                  href={link}
+                  rel="noopener noreferrer nofollow"
+                  target="blank"
+                >
                   <Icon />
                 </a>
               </li>
