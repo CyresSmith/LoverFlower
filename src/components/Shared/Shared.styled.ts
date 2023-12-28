@@ -33,6 +33,12 @@ export const Container = styled.div`
   }
 `;
 
+export const Box = styled.div`
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+`;
+
 export const SectionTitle = styled.h2`
   color: ${theme.colors.white};
   font-family: ${theme.fonts.heading};

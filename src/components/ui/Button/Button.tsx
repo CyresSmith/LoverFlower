@@ -3,7 +3,7 @@ import { SyntheticEvent } from 'react';
 import { Link } from 'react-router-dom';
 import { StyledButton } from './Button.styled';
 
-interface ButtonProps {
+interface IButton {
   as?: 'button' | 'link';
   loading?: boolean;
   disabled?: boolean;
@@ -13,12 +13,12 @@ interface ButtonProps {
   onClick?: (e: SyntheticEvent) => void;
 }
 
-interface LinkProps {
+interface ILink {
   as?: 'button' | 'link';
   to?: string | null;
 }
 
-interface Props extends ButtonProps, LinkProps {}
+export interface IButtonProps extends IButton, ILink {}
 
 const Button = ({
   children,
@@ -29,7 +29,7 @@ const Button = ({
   type = 'button',
   to,
   as = 'button',
-}: Props) => {
+}: IButtonProps) => {
   return (
     <StyledButton
       as={as === 'button' ? 'button' : Link}

@@ -3,7 +3,8 @@ import theme from 'theme';
 
 export const CarouselBox = styled.div`
   position: relative;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
   margin-bottom: 60px;
 

@@ -1,12 +1,11 @@
 import styled from '@emotion/styled';
 import theme from 'theme';
+import { IButtonProps } from './Button';
 
-interface variant {
-  variant: 'primary' | 'secondary';
-  to: string;
-}
+interface IStyledButton
+  extends Pick<IButtonProps, 'variant' | 'to' | 'round'> {}
 
-export const StyledButton = styled.button<variant>`
+export const StyledButton = styled.button<IStyledButton>`
   height: 50px;
   min-width: 220px;
   padding: 16px;
@@ -19,6 +18,7 @@ export const StyledButton = styled.button<variant>`
   letter-spacing: 1.2px;
   text-transform: uppercase;
   border: ${p => (p.variant === 'primary' ? 0 : '1px solid #fff')};
+  border-radius: ${p => (p.round ? '20px' : 'none')};
   cursor: pointer;
   transition: ${theme.transition.primary};
   text-align: center;

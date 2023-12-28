@@ -4,12 +4,6 @@ import backgroundImage from 'assets/img/image100.jpg';
 import { IPosition } from 'components/Shared/types';
 import theme from 'theme';
 
-export const Box = styled.div`
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-`;
-
 export const Ellipse1 = styled.div`
   width: 358.902px;
   height: 293.047px;

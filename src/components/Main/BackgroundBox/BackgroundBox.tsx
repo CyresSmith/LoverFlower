@@ -5,7 +5,6 @@ import {
   BackgroundImgBox2,
   BackgroundText,
   Bottom,
-  Box,
   Ellipse1,
   Ellipse10,
   Ellipse2,
@@ -16,9 +15,10 @@ import {
   Ellipse7,
   Ellipse8,
   Ellipse9,
-} from './LayoutBox.styled';
+} from './BackgroundBox.styled';
 
 import Lover_flower from 'assets/svg/lover_flower.svg?react';
+import { Box } from 'components/Shared/Shared.styled';
 
 const BackgroundTextArr: IAbsoluteText[] = [
   {
@@ -59,11 +59,12 @@ const Instagram: IAbsoluteText = {
   },
   text: 'Instagram',
 };
+
 type Props = {
-  children: ReactElement;
+  children: ReactElement[];
 };
 
-const LayoutBox = ({ children }: Props) => {
+const BackgroundBox = ({ children }: Props) => {
   return (
     <Box>
       <BackgroundImgBox />
@@ -95,4 +96,4 @@ const LayoutBox = ({ children }: Props) => {
   );
 };
 
-export default LayoutBox;
+export default BackgroundBox;

@@ -3,7 +3,6 @@ import Header from 'components/Header';
 import ToTopButton from 'components/ui/ToTopButton';
 import { useEffect, useState } from 'react';
 import { Outlet } from 'react-router-dom';
-import LayoutBox from './LayoutBox';
 
 const Layout = () => {
   const [scroll, setScroll] = useState(0);
@@ -24,11 +23,9 @@ const Layout = () => {
   return (
     <>
       <Header scroll={scroll} />
-      <LayoutBox>
-        <main>
-          <Outlet />
-        </main>
-      </LayoutBox>
+      <main>
+        <Outlet />
+      </main>
       <Footer />
       <ToTopButton scroll={scroll} />
     </>

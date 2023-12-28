@@ -1,10 +1,11 @@
 import styled from '@emotion/styled';
 import { Link } from 'react-router-dom';
 import theme from 'theme';
+import { ICard } from './Card';
 
 export const CardBox = styled.div`
   position: relative;
-  width: calc((100% - (30px * 2)) / 3);
+  width: 100%;
 `;
 
 export const LinkBox = styled(Link)`
@@ -49,10 +50,10 @@ export const Badge = styled.div<IBadge>`
   }
 `;
 
-export const ImageBox = styled.div`
+export const ImageBox = styled.div<ICard>`
   position: relative;
   width: 100%;
-  height: 450px;
+  ${({ big }) => `height: ${big ? `450` : `355`}px;`}
   margin-bottom: 10px;
   overflow: hidden;
 
