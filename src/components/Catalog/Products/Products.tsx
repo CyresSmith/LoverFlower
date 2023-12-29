@@ -70,6 +70,8 @@ const Products = ({
 
         <Gallery>
           <Filter
+            minPrice={100}
+            maxPrice={1500}
             filters={filters}
             filterState={filterState}
             setFilterState={setFilterState}

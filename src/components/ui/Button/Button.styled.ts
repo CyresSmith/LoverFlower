@@ -2,8 +2,7 @@ import styled from '@emotion/styled';
 import theme from 'theme';
 import { IButtonProps } from './Button';
 
-interface IStyledButton
-  extends Pick<IButtonProps, 'variant' | 'to' | 'round'> {}
+interface IStyledButton extends Pick<IButtonProps, 'variant' | 'to'> {}
 
 export const StyledButton = styled.button<IStyledButton>`
   height: 50px;
@@ -18,7 +17,6 @@ export const StyledButton = styled.button<IStyledButton>`
   letter-spacing: 1.2px;
   text-transform: uppercase;
   border: ${p => (p.variant === 'primary' ? 0 : '1px solid #fff')};
-  border-radius: ${p => (p.round ? '20px' : 'none')};
   cursor: pointer;
   transition: ${theme.transition.primary};
   text-align: center;
@@ -36,7 +34,7 @@ export const StyledButton = styled.button<IStyledButton>`
   }
 
   :focus {
-    border: 0;
+    border: ${p => (p.variant === 'primary' ? 0 : '1px solid #fff')};
   }
 
   :active {

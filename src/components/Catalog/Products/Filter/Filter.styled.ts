@@ -8,7 +8,7 @@ export const FilterBox = styled.ul`
   background: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(10px);
   align-content: start;
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
   gap: 23px;
 `;
@@ -25,4 +25,10 @@ export const FilterTitle = styled.p`
   font-weight: ${theme.fontWeights.bold};
   letter-spacing: 0.56px;
   text-transform: uppercase;
+`;
+
+export const RangeBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 `;
