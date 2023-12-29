@@ -75,6 +75,7 @@ const Products = ({
             filters={filters}
             filterState={filterState}
             setFilterState={setFilterState}
+            selectedCategories={selectedCategories}
           />
 
           <ProductsList>

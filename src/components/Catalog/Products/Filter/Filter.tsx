@@ -1,4 +1,4 @@
-import { IFilterSection } from 'components/Shared/types';
+import { ICategory, IFilterSection } from 'components/Shared/types';
 import Button from 'components/ui/Button';
 import Checkbox from 'components/ui/Checkbox/Checkbox';
 import { Name } from 'components/ui/Checkbox/Checkbox.styled';
@@ -18,6 +18,7 @@ interface IFilterProps {
   filters: IFilterSection[];
   filterState: IFilters;
   setFilterState: Dispatch<SetStateAction<IFilters>>;
+  selectedCategories: ICategory[];
 }
 
 const Filter = ({
@@ -26,6 +27,7 @@ const Filter = ({
   filters,
   filterState,
   setFilterState,
+  selectedCategories,
 }: IFilterProps) => {
   const [priseFilter, setPriseFilter] = useState<number[]>([
     Object.keys(filterState).includes('price')
@@ -101,31 +103,40 @@ const Filter = ({
           </RangeBox>
         </FilterSection>
 
-        {filters.map(({ sectionId, filters, title }) => (
-          <FilterSection key={sectionId}>
-            <FilterTitle>{title}</FilterTitle>
-            <ul>
-              {filters.map(({ id, title }) => {
-                let values = '';
+        {filters.map(({ sectionId, filters, title }) => {
+          if (
+            selectedCategories.length &&
+            (sectionId === 'light' || sectionId === 'format')
+          ) {
+            return;
+          }
 
-                if (Object.keys(filterState).includes(sectionId)) {
-                  values = filterState[sectionId];
-                }
+          return (
+            <FilterSection key={sectionId}>
+              <FilterTitle>{title}</FilterTitle>
+              <ul>
+                {filters.map(({ id, title }) => {
+                  let values = '';
 
-                return (
-                  <li key={id}>
-                    <Checkbox
-                      id={id}
-                      label={title}
-                      checked={values.includes(id)}
-                      onChange={() => handleFilterCheck(sectionId, id)}
-                    />
-                  </li>
-                );
-              })}
-            </ul>
-          </FilterSection>
-        ))}
+                  if (Object.keys(filterState).includes(sectionId)) {
+                    values = filterState[sectionId];
+                  }
+
+                  return (
+                    <li key={id}>
+                      <Checkbox
+                        id={id}
+                        label={title}
+                        checked={values.includes(id)}
+                        onChange={() => handleFilterCheck(sectionId, id)}
+                      />
+                    </li>
+                  );
+                })}
+              </ul>
+            </FilterSection>
+          );
+        })}
 
         <Button
           variant="secondary"
